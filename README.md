@@ -15,11 +15,11 @@ On Shopify, we have exactly 100 sneaker shops, and each of these shops sells onl
 I was able to recreate the average order value from the previous analysis.
 <img src="images/original_aov.png"></img>
 
-Judging by the high AOV, it looks like there is either a typo, or some outlying data. 
+Judging by the high AOV, it looks like there is either an input error, or some outlying data. 
 
-After some analysis I discovered that there is a regular bulk order that goes through one of the stores (Store 42) where 2000 units are purchased at a time (for $704000). These transactions at this store is skewing the Average Order Value. This may or may not need further investigation depending on the nature of the Shopify business. 
+After some analysis I discovered that there is a regular bulk order that goes through one of the stores (Store 42) where 2000 units are purchased at a time (for $704000). There is also some interesting data at Store 78: The average item (Sneaker) cost is $25725.00. The transactions at these stores are skewing the Average Order Value. This may or may not need further investigation depending on the nature of the Shopify business. 
 
-Because each store only carries one model of shoe, we can also see that they only carry one shoe at one pricepoint. Each store's average item cost is the price of their one shoe.
+Because each store only carries one model of shoe, we can also see that they only carry one price point. Each store's average item cost is the price of their one shoe.
 
 A more promising, but also compromised metric might be UPT(units per transaction). However, we can see that this is also skewed by the 2000 unit bulk sale is coming from Store 42.
 
@@ -29,10 +29,18 @@ A more promising, but also compromised metric might be UPT(units per transaction
 There are at least 2 options, depending on what the company is most interested in. 
 The first would be to calculate the AOV or UPT per Store. That would give a good idea as to how much is store is selling. 
 
-Another option for the bigger picture would be to examine other measures of central tendency such as median. This is particularly useful in this case, where because of the limitations of the shoe breadth per store, you can extrapolate some details about styles. 
+Another option for the bigger picture would be to examine other measures of central tendency such as median. This is particularly useful in this case, where because of the limitations of the shoe breadth per store, you can extrapolate some details about customer preferred styles. 
 
 ### c.	What is its value?
 
+I think the most valuable metric would be to determine each store's AOV and compare it to the median. 
+
+I have included a snippet of the dataframe here:
+
+<img src="images/averages_df.png"></img>
+
+The entire dataframe is available 
+<a href="AOV_Shop_data.csv">here</a>.
 
 The median value of the entire dataset order value is $284.
 
