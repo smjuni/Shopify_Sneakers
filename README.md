@@ -17,7 +17,7 @@ I was able to recreate the average order value from the previous analysis.
 
 Judging by the high AOV, it looks like there is either an input error, or some outlying data. 
 
-After some analysis I discovered that there is a regular bulk order that goes through one of the stores (Store 42) where 2000 units are purchased at a time (for $704000). There is also some interesting data at Store 78: The average item (Sneaker) cost is $25725.00. The transactions at these stores are skewing the Average Order Value. This may or may not need further investigation depending on the nature of the Shopify business. 
+After some analysis I discovered that there is a regular bulk order that goes through one of the stores (Store 42) where 2000 units are purchased at a time (for $704000). There is also some interesting data at Store 78: The average item (Sneaker) cost is $25725.00. The transactions at these stores are skewing the Average Order Value. This may or may not need further investigation depending on the nature of the Shopify businesses. 
 
 Because each store only carries one model of shoe, we can also see that they only carry one price point. Each store's average item cost is the price of their one shoe.
 
@@ -27,9 +27,12 @@ A more promising, but also compromised metric might be UPT(units per transaction
 
 
 There are at least 2 options, depending on what the company is most interested in. 
-The first would be to calculate the AOV or UPT per Store. That would give a good idea as to how much is store is selling. 
 
-Another option for the bigger picture would be to examine other measures of central tendency such as median. This is particularly useful in this case, where because of the limitations of the shoe breadth per store, you can extrapolate some details about customer preferred styles. 
+The first would be to calculate the AOV or UPT per Store. That would give a good idea as to how much each store is selling. 
+
+Another option for the bigger picture analysis would be to examine other measures of central tendency such as median and mode and compare each stores AOV/UPT. 
+
+The limitations of the shoe breadth per store allows us to extrapolate some details about customer preferred styles which could be particularly useful in this case study.
 
 ### c.	What is its value?
 
@@ -43,6 +46,8 @@ The entire dataframe is available
 <a href="AOV_Shop_data.csv">here</a>.
 
 The median value of the entire dataset order value is $284.
+
+The mode is $153.
 
 ## Question 2
 
