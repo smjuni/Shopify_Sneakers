@@ -17,7 +17,7 @@ I was able to recreate the average order value from the previous analysis.
 
 Judging by the high AOV, it looks like there is either an input error, or some outlying data. 
 
-After some analysis I discovered that there is a regular bulk order that goes through one of the stores (Store 42) where 2000 units are purchased at a time (for $704000). There is also some interesting data at Store 78: The average item (Sneaker) cost is $25725.00. The transactions at these stores are skewing the Average Order Value. This may or may not need further investigation depending on the nature of the Shopify businesses. 
+After some analysis I discovered that there is a regular bulk order that goes through one of the stores (Store 42) where 2000 units are purchased at a time (for $704000). There is also some interesting data at Store 78: The average item (Sneaker) cost is $25725.00. The transactions at these stores are skewing the Average Order Value. This may or may not need further investigation depending on the nature of the Shopify business. 
 
 Because each store only carries one model of shoe, we can also see that they only carry one price point. Each store's average item cost is the price of their one shoe.
 
